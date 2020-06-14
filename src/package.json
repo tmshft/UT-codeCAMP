@@ -1,0 +1,16 @@
+{
+  "name": "jest-example",
+  "version": "1.0.0",
+  "description": "A simple example of testing with Jest.",
+  "main": "index.js",
+  "repository": "https://github.com/bnz-digital/jest-example.git",
+  "author": "Charles Munat <Charles_Munat@bnz.co.nz>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jest": "^23.6.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
