@@ -1,5 +1,5 @@
 /*
- * UT-codeCAMP vol 0 用
+ * UT-codeCAMP
  *
  * 以下のメソッドのテストコードを実装してください。
  * add / devide
@@ -8,7 +8,6 @@
  * - 関数の存在確認
  * - 整数演算、小数演算
  * - 数値以外の引数付与
- * - などなど
  *
  */
 import { add, devide } from "./calc";

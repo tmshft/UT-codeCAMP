@@ -1,3 +1,8 @@
+/*
+ * 3の倍数ならば Fizz
+ * 5の倍数ならば Buzz
+ * を返す
+ */
 export function toFizzBuzz(num) {
   if (outOfRange(num))
     throw new RangeError("引数が不正です。1以上の整数のみ引数に指定可能です。");
