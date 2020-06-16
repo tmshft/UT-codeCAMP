@@ -1,4 +1,9 @@
 /*
+ * UT-codeCAMP Vol 0
+ * テストコード回答例
+ *
+ */
+/*
 import { toFizzBuzz } from "./fizzbuzz";
 
 test("abnormal case", () => {
@@ -13,5 +18,6 @@ test("normal case", () => {
   expect(toFizzBuzz(3)).toBe("Fizz");
   expect(toFizzBuzz(5)).toBe("Buzz");
   expect(toFizzBuzz(15)).toBe("FizzBuzz");
+  expect(callFizzBuzz(1/0)).toBe(Infinity);
 });
 */

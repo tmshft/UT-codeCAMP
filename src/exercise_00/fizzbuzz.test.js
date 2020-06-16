@@ -1,15 +1,15 @@
 /*
  * UT-codeCAMP Vol 0
- * Unit Test Exercise
+ * ワーク用テストコード
  */
-import { toFizzBuzz } from "./fizzbuzz";
+import { callFizzBuzz } from "./fizzbuzz";
 
 test("abnormal case", () => {
-  expect(() => toFizzBuzz("test")).toThrow(RangeError);
+  expect(() => callFizzBuzz("test")).toThrow(RangeError);
   // TODO テストコードを実装してください
 });
 
 test("normal case", () => {
-  expect(toFizzBuzz(1)).toBe(1);
+  expect(callFizzBuzz(3)).toBe("Fizz");
   // TODO テストコードを実装してください
 });
