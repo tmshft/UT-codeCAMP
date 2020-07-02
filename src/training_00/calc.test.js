@@ -1,4 +1,4 @@
-import { add, devide } from "./calc";
+import { add } from "./calc";
 
 describe("足し算", () => {
   test("存在確認", () => {
@@ -9,8 +9,5 @@ describe("足し算", () => {
   });
   test("小数の足し算", () => {
     expect(add(1.1, 2.2)).toBeCloseTo(3.3);
-  });
-  test("数値以外を渡す", () => {
-    expect(add("a", 2)).toBeNaN();
   });
 });
