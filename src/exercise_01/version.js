@@ -1,5 +1,5 @@
 /*
- * UT-codeCAMP Vol 1.0
+ * UT-codeCAMP
  * ワーク用プロダクトコード
  *
  * Javaのバージョニング
