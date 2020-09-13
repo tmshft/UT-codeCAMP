@@ -1,11 +1,11 @@
-# work example for UT-codeCAMP Vol.0
+# work example for UT-codeCAMP
 
 This is UNIT TEST exercise for QA who want to code Unit Test.
 
 - language: JavaScript
 - test framework: JEST
-- production code: calc.js
-- exercuse code : calc_test.js
+- production code: src/exercise_01/version.js
+- exercuse code : src/exercise_01/version.test.js
 
 ---
 
