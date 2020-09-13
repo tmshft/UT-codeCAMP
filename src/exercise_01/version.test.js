@@ -6,7 +6,7 @@
  */
 import { callVersion } from "./version";
 
-describe("正常系", () => {
+describe("異常系", () => {
   test("＜TODO テストスコープを記載＞", () => {
     expect(() => callVersion("")).toThrow(Error);
     // TODO テストコードを実装してください

@@ -6,7 +6,7 @@
  */
 import { callVersion } from "./version";
 
-describe("正常系", () => {
+describe("異常系", () => {
   test("文字列、デリミッタ", () => {
     expect(() => callVersion("AA")).toThrow(Error);
     expect(() => callVersion("A.A")).toThrow(Error);
