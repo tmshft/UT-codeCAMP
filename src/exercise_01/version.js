@@ -20,6 +20,8 @@ class Version {
     for (var i = 0; i < p.length; i++) {
       if (isNaN(Number(p[i]))) {
         throw new Error("invalid expression");
+      } else if(Number(p[i]) < 0) {
+        throw new Error("invalid number");
       }
     }
 
@@ -43,7 +45,7 @@ class Version {
       this.patch = Number(p[3]);
     }
 
-    // バージョンをチェック
+    // 機能リリース・バージョンの下限チェック
     if (this.feature < 10) {
       throw new Error("Major versions smaller than 10 are invalid");
     }
