@@ -4,18 +4,18 @@
  *
  * Javaのバージョニング
  */
-import { callVersion } from "./version";
+import { Version } from "./version";
 
-describe("異常系", () => {
-  test("＜TODO テストスコープを記載＞", () => {
-    expect(() => callVersion("")).toThrow(Error);
+describe("abnormal cases", () => {
+  test("<TODO please describe your test scope>", () => {
+    expect(() => new Version("")).toThrow(Error);
     // TODO テストコードを実装してください
   });
 });
 
-describe("正常系", () => {
-  test("＜TODO テストスコープを記載＞", () => {
-    expect(callVersion("11.2.3.4").feature).toEqual(11);
+describe("normal cases", () => {
+  test("<TODO please describe your test scope>", () => {
+    expect(new Version("11.2.3.4").feature).toEqual(11);
     // TODO テストコードを実装してください
   });
 });

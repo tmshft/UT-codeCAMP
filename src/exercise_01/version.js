@@ -5,22 +5,20 @@
  * Javaのバージョニング
  *
  */
-export function callVersion(expression) {
-  return new Version(expression);
-}
-
-class Version {
+export class Version {
   constructor(expression) {
     var p = expression.split(".");
 
+    // 要素数チェック
     if (expression === "" || p.length < 1 || p.length > 4) {
       throw new Error("invalid expression");
     }
 
     for (var i = 0; i < p.length; i++) {
+      // 数値チェックと値チェック
       if (isNaN(Number(p[i]))) {
         throw new Error("invalid expression");
-      } else if(Number(p[i]) < 0) {
+      } else if (Number(p[i]) < 0 || Number(p[i]) > 999) {
         throw new Error("invalid number");
       }
     }
@@ -50,7 +48,7 @@ class Version {
       throw new Error("Major versions smaller than 10 are invalid");
     }
 
-    // 省略表記の誤りチェック
+    // ゼロ末尾は誤り
     if (p.length === 2 && Number(p[1]) === 0) {
       throw new Error("Zero interim shoulde be omitted");
     } else if (p.length === 3 && Number(p[2]) === 0) {
@@ -60,7 +58,7 @@ class Version {
     }
   }
 
-  // バージョンの数値化
+  // 数値化
   get value() {
     return Number(
       ("000" + this.feature).slice(-3) +
@@ -68,5 +66,19 @@ class Version {
         ("000" + this.update).slice(-3) +
         ("000" + this.patch).slice(-3)
     );
+  }
+
+  // バージョン比較
+  // 要素をゼロサプレス(000)で連結した数値に変換して比較する
+  compare(expression) {
+    var versionNum1 = this.value;
+    var versionNum2 = new Version(expression).value;
+    if (versionNum1 === versionNum2) {
+      return 0;
+    } else if (versionNum1 > versionNum2) {
+      return 1;
+    } else {
+      return -1;
+    }
   }
 }
