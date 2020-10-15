@@ -53,8 +53,8 @@ class Cart {
    * カートの商品の合計金額を返す関数
    * @return totalPrice: number
    */
-  getTotalPrice = () => this.itemList.reduce(
-    (acc, cur) => acc + ITEM_MAP.get(cur.id).price * cur.quantity,
+  getTotalPrice = () => [...this.itemList].reduce(
+    (acc, cur) => acc + ITEM_MAP.get(cur[0]).price * cur[1].quantity,
     0,
   );
 }
