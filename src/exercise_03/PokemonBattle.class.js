@@ -47,7 +47,7 @@ class PokemonBattle {
    * @return number
    */
   baseDamage = () => Math.floor(
-    Math.floor(this.level * 0.4 + 2 * this.power * this.attack / this.defense) / 50 + 2,
+    Math.floor((this.level * 0.4 + 2) * this.power * this.attack / this.defense) / 50 + 2,
   );
 
   /**

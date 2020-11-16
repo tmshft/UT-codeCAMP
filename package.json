@@ -11,9 +11,8 @@
     "acorn": "7.3.1",
     "babel-eslint": "^10.1.0",
     "handlebars": "4.7.6",
-    "jest": "^23.6.0",
     "js-yaml": "3.14.0",
-    "lodash": "4.17.15",
+    "lodash": "^4.17.20",
     "minimist": "1.2.5",
     "mixin-deep": "2.0.1"
   },
@@ -24,7 +23,12 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "babel-jest": "^26.6.3",
     "eslint": "^7.13.0",
+    "jest": "^26.6.3",
     "react-scripts": "1.0.0"
   }
 }
