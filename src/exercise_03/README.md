@@ -1,4 +1,6 @@
-# UT-code:CAMP vol.2.0
+# 演習課題: ポケモンのダメージ計算式
+
+UT-code:CAMP vol.3.0
 
 ## ファイルの説明
 README.md  ＼見つけたら真っ先に読むファイル／  
