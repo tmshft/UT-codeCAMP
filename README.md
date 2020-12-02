@@ -4,8 +4,7 @@ This is UNIT TEST exercise for QA who want to code Unit Test.
 
 - language: JavaScript
 - test framework: JEST
-- production code: src/exercise_01/version.js
-- exercuse code : src/exercise_01/version.test.js
+- production code: src/exercise_NN
 
 ---
 
