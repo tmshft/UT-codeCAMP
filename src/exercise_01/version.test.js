@@ -1,21 +1,85 @@
+/* global expect, describe, test */
+import Version from './version';
+
 /*
  * UT-codeCAMP
  * ワーク用テストコード
  *
  * Javaのバージョニング
  */
-import { Version } from "./version";
 
-describe("abnormal cases", () => {
-  test("<TODO please describe your test scope>", () => {
-    expect(() => new Version("")).toThrow(Error);
-    // TODO テストコードを実装してください
+describe('正常系', () => {
+  describe('コンストラクタ', () => {
+    test('1. バージョンの数字が4個', () => {
+      expect(new Version('11.2.3.4').feature).toEqual(11);
+    });
+    test('2. バージョンの数字が3個', () => {
+      // TODO: テストコードを実装してください
+    });
+    test('3. バージョンの数字が2個', () => {
+      // TODO: テストコードを実装してください
+    });
+    test('4. バージョンの数字が1個', () => {
+      // TODO: テストコードを実装してください
+    });
+  });
+  describe('compare', () => {
+    test('1. compare バージョンの数字が4個同士の比較', () => {
+      const version1 = new Version('11.2.3.4');
+      const version2 = new Version('11.2.3.4');
+      expect(version1.compare(version2)).toEqual(0);
+      // TODO: 続きを記述してください
+    });
+    test('2. compare バージョンの数字が4個と3個の比較', () => {
+      // TODO: テストコードを実装してください
+    });
+    test('3. compare バージョンの数字が4個と2個の比較', () => {
+      // TODO: テストコードを実装してください
+    });
+    test('4. compare バージョンの数字が4個と1個の比較', () => {
+      // TODO: テストコードを実装してください
+    });
+    test('5. compare バージョンの数字が3個同士の比較', () => {
+      // TODO: テストコードを実装してください
+    });
+    test('6. compare バージョンの数字が3個と2個の比較', () => {
+      // TODO: テストコードを実装してください
+    });
+    test('7. compare バージョンの数字が3個と1個の比較', () => {
+      // TODO: テストコードを実装してください
+    });
+    test('8. compare バージョンの数字が2個同士の比較', () => {
+      // TODO: テストコードを実装してください
+    });
+    test('9. compare バージョンの数字が2個と1個の比較', () => {
+      // TODO: テストコードを実装してください
+    });
+    test('10. compare バージョンの数字が1個同士の比較', () => {
+      // TODO: テストコードを実装してください
+    });
   });
 });
 
-describe("normal cases", () => {
-  test("<TODO please describe your test scope>", () => {
-    expect(new Version("11.2.3.4").feature).toEqual(11);
-    // TODO テストコードを実装してください
+describe('異常系', () => {
+  describe('コンストラクタ', () => {
+    test('1. 引数に空文字列', () => {
+      expect(() => new Version('')).toThrow(Error);
+      // TODO: テストコードを実装してください
+    });
+    test('2. 引数に数字', () => {
+      // TODO: テストコードを実装してください
+    });
+    test('3. 引数に期待されていない文字列', () => {
+      // TODO: テストコードを実装してください
+    });
+    test('4. 引数にバージョンの数字が5個', () => {
+      // TODO: テストコードを実装してください
+    });
+    test('5. 引数のバージョン構成要素の桁の境界値', () => {
+      // TODO: テストコードを実装してください
+    });
+    test('6. 引数のバージョン構成要素の0の省略', () => {
+      // TODO: テストコードを実装してください
+    });
   });
 });
